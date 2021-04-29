@@ -1,0 +1,25 @@
+{% extends '_templates/base.njk' %}
+
+{% block content %}
+<article class="container">
+  <h1>Discography of the band, Queen</h1>
+  <p>A compiled list of all their albums since 1973.</p>
+
+  <div class="card mb-3" style="max-width: 540px;">
+  {% for album in queen.discography %}
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="img/discs/{{ album.image }}" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ album.title}}</h5>
+        <p class="card-text">{{ album.year }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+</article>
+{% endblock %}

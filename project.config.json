@@ -9,6 +9,11 @@
       "fileId": "1gDwO-32cgpBDn_0niV0iu6TqQTaRDr4nmSqnT53magY",
       "type": "sheet",
       "name": "bookstores"
+    },
+    {
+      "fileId": "1KUQMzkIezHkUqAsW2GV3eHTLVpSjhKDN-s23Y3WRJCo",
+      "type": "sheet",
+      "name": "queen"
     }
   ],
   "to_bake": [
@@ -18,6 +23,15 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
+    }
+  ],
+  "to_bake": [
+    {
+      "template": "bake-members",
+      "data": "queen",
+      "array": "members",
+      "slug": "slug",
+      "path": "members"
     }
   ]
 }
