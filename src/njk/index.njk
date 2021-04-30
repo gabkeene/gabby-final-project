@@ -4,12 +4,12 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
+  
       <h1>A website dedicated to the band, Queen</h1>
-      <p>Queen are a British rock band formed in London in 1970. There were four main members of the band: Freddie Mercury, Brian May, Roger Taylor and John Deacon. Some of their most famous songs include "Bohemian Rhapsody" and "We Are The Champions."</p>
-    </div>
-  </div>
+      <p>Queen are a British rock band formed in London in 1970. There were four main members of the band: Freddie Mercury, Brian May, Roger Taylor and John Deacon. Some of their most famous songs include "Bohemian Rhapsody" and "We Are The Champions." (Source: <a href="https://en.wikipedia.org/wiki/Queen_(band)#:~:text=Queen%20are%20a%20British%20rock,and%20John%20Deacon%20(bass).&text=He%20joined%20in%201970%20and%20suggested%20the%20name%20%22Queen%22." target="_blank">Wikipedia</a>)</p>
+      <h2>Members of the band</h2>
+      <p>Click on each name to go to their separate pages!</p>
+    
 
   <div class="row">
     {% for members in queen.members %}
@@ -19,6 +19,17 @@
       </div>
     {% endfor %}
   </div> 
+
+  <h2 class="index-members"><a href="discography.html">Discography</a></h2>
+
+<div class="index-discs">
+{% for album in queen.discography %}
+    <h3>{{ album.title }} ({{ album.year}}) </h3>
+    <img src="img/discs/{{album.image}}" alt="discs" class="img-fluid">
+    <hr>
+  {% endfor %}
+</div>
+
 
 </div>
 {% endblock %}
