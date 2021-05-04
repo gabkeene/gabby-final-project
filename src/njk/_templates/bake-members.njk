@@ -13,11 +13,12 @@
     <div class="row">
       <div class="col-sm-4">
           <img src="../img/members/{{ image }}" alt="members" class="img-fluid mb-4">
+          <h6>Tenure: {{ tenure }}</h6>
       </div>
       <div class="col-sm-8">
           <h1>{{ name }}</h1>
-          <h5>Instruments: {{ instruments }}</h5>
           <h5>Born in {{ birthplace }} on {{ birthdate }}</h5>
+          <h5>Instruments: {{ instruments }}</h5>
           <p>{{ description | safe }}</p>
           {{ prose(post) }}
       </div>
