@@ -5,31 +5,39 @@
 {% block content %}
 <div class="container">
   
-      <h1>A website dedicated to the band, Queen</h1>
+      <h2>If you're just starting to fangirl over Queen, here is where you can learn all the basics</h2>
       <p>Queen are a British rock band formed in London in 1970. There were four main members of the band: Freddie Mercury, Brian May, Roger Taylor and John Deacon. Some of their most famous songs include "Bohemian Rhapsody" and "We Are The Champions." (Source: <a href="https://en.wikipedia.org/wiki/Queen_(band)#:~:text=Queen%20are%20a%20British%20rock,and%20John%20Deacon%20(bass).&text=He%20joined%20in%201970%20and%20suggested%20the%20name%20%22Queen%22." target="_blank">Wikipedia</a>)</p>
-      <h2>Members of the band</h2>
-      <p>Click on each name to go to their separate pages!</p>
+      <hr>
+      <h3>Members of the band</h3>
+      <p>The famous members of Queen are each so different and talented! Click on each name to learn more!</p>
     
 
   <div class="row">
     {% for members in queen.members %}
-      <div class="col">
+      <div class="col-sm-6 col-md-3 col-lg-3">
         <img src="img/members/{{ members.image }}" alt="members" class="img-fluid">
         <h3 class="index-members"><a href="members/{{ members.slug }}.html">{{ members.name }}</a></h3>
       </div>
     {% endfor %}
   </div> 
 
-  <h2 class="index-members"><a href="discography.html">Discography</a></h2>
+<hr>
 
-<div class="index-discs">
+  <h3 class="index-discography"><a href="discography.html">Discography</a></h3>
+  <p>Below, you'll find all the albums from 1973-1995</p>
+
+<div class="row row-cols-sm-2 row-cols-md-3">
 {% for album in queen.discography %}
-    <h3>{{ album.title }} ({{ album.year}}) </h3>
-    <img src="img/discs/{{album.image}}" alt="discs" class="img-fluid">
-    <hr>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="img/discs/{{album.image}}" class="card-img-top" alt="discs">
+      <div class="card-body">
+        <h5 class="card-title">{{ album.title }} ({{ album.year}})</h5>
+      </div>
+    </div>
+  </div>
   {% endfor %}
 </div>
-
 
 </div>
 {% endblock %}

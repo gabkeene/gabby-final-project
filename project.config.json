@@ -23,9 +23,7 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
-    }
-  ],
-  "to_bake": [
+    },
     {
       "template": "bake-members",
       "data": "queen",
